@@ -13,7 +13,8 @@ class MainStoryontroller: UIViewController, UITextFieldDelegate {
     //MARK: Properties
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var mealNameLabel: UILabel!
-
+    @IBOutlet weak var photoImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,19 +23,19 @@ class MainStoryontroller: UIViewController, UITextFieldDelegate {
     }
     
     //MARK: Action
-    @IBAction func setDefaultLabelText(_ sender: UIButton) {
-        mealNameLabel.text = "Default Text"
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        mealNameLabel.text = textField.text
+    }
+
+    //MARK: UITextFieldDelegate
+    @IBAction func selectImageFromPhotoLibrary(_ sender: UIGestureRecognizer) {
     }
     
-    //MARK: UITextFieldDelegate
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         // Hide the keyboard.
         textField.resignFirstResponder()
         return true
     }
     
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        mealNameLabel.text = textField.text
-    }
 }
 
