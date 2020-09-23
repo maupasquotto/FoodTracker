@@ -22,13 +22,19 @@ class MainStoryontroller: UIViewController, UITextFieldDelegate,UIImagePickerCon
         nameTextField.delegate = self
     }
     
-    //MARK: Action
+    //MARK: UITextFieldDelegate
     func textFieldDidEndEditing(_ textField: UITextField) {
         mealNameLabel.text = textField.text
     }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        // Hide the keyboard.
+        textField.resignFirstResponder()
+        return true
+    }
 
-    //MARK: UITextFieldDelegate
-    @IBAction func selectImageFromPhotoLibrary(_ sender: UIGestureRecognizer) {
+    //MARK: Action
+    @IBAction func selectImageFromPhotoLibrary(_ sender: UITapGestureRecognizer) {
         // hide the keyboard.
         nameTextField.resignFirstResponder()
         
@@ -41,12 +47,6 @@ class MainStoryontroller: UIViewController, UITextFieldDelegate,UIImagePickerCon
         // Make sure ViewController is notified when the user picks an image.
         imagePickerController.delegate = self
         present(imagePickerController, animated: true, completion: nil)
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        // Hide the keyboard.
-        textField.resignFirstResponder()
-        return true
     }
     
     //MARK: UIImagePickerControllerDelegate
