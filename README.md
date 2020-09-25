@@ -6,6 +6,7 @@ This iOS app has been created to understand the concepet with Swift, following A
 - [ ] Create tests
 - [ ] Make sure that the data is on some db
 - [ ] Create any new feature
+- [ ] Update this README
 
 ## License
 Not yet
