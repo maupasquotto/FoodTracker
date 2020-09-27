@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		353CA5892521332700F4BA1A /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353CA5882521332700F4BA1A /* Meal.swift */; };
 		35659FD425167CC00017CD73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35659FD325167CC00017CD73 /* AppDelegate.swift */; };
 		35659FD625167CC00017CD73 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35659FD525167CC00017CD73 /* SceneDelegate.swift */; };
 		35659FD825167CC00017CD73 /* MainStoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35659FD725167CC00017CD73 /* MainStoryController.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		353CA5882521332700F4BA1A /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		35659FD025167CC00017CD73 /* FoodTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35659FD325167CC00017CD73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35659FD525167CC00017CD73 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				35659FD525167CC00017CD73 /* SceneDelegate.swift */,
 				35659FD725167CC00017CD73 /* MainStoryController.swift */,
 				35CD8C05251D62DA007192CC /* RatingControl.swift */,
+				353CA5882521332700F4BA1A /* Meal.swift */,
 				35659FD925167CC00017CD73 /* Main.storyboard */,
 				35659FDC25167CC10017CD73 /* Assets.xcassets */,
 				35659FDE25167CC10017CD73 /* LaunchScreen.storyboard */,
@@ -203,6 +206,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				353CA5892521332700F4BA1A /* Meal.swift in Sources */,
 				35CD8C06251D62DA007192CC /* RatingControl.swift in Sources */,
 				35659FD825167CC00017CD73 /* MainStoryController.swift in Sources */,
 				35659FD425167CC00017CD73 /* AppDelegate.swift in Sources */,

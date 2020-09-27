@@ -50,6 +50,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </stackView>
                                 </subviews>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="IRl-RW-0Ya" secondAttribute="trailing" id="RIr-eK-Doj"/>
                                     <constraint firstItem="IRl-RW-0Ya" firstAttribute="leading" secondItem="Gvb-fd-6Xx" secondAttribute="leading" id="eDl-1h-hqP"/>
