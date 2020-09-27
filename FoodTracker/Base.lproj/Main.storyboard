@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="Gvb-fd-6Xx">
-                                <rect key="frame" x="20" y="20" width="374" height="554.33333333333337"/>
+                                <rect key="frame" x="20" y="19.999999999999972" width="374" height="511.33333333333326"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qcp-Xi-Ty1">
                                         <rect key="frame" x="145.66666666666666" y="0.0" width="83" height="20.333333333333332"/>
@@ -31,12 +31,8 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cx4-UT-yIy">
-                                        <rect key="frame" x="111.66666666666666" y="80.333333333333329" width="150.99999999999997" height="30"/>
-                                        <state key="normal" title="Set Deafult Label Text"/>
-                                    </button>
                                     <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="IRl-RW-0Ya">
-                                        <rect key="frame" x="0.0" y="123.33333333333337" width="374" height="374"/>
+                                        <rect key="frame" x="0.0" y="80.333333333333314" width="374" height="374"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="IRl-RW-0Ya" secondAttribute="height" multiplier="1:1" id="F8m-0s-wXm"/>
@@ -46,7 +42,7 @@
                                         </connections>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="uNc-Dq-2dt" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
-                                        <rect key="frame" x="61" y="510.33333333333337" width="252" height="44"/>
+                                        <rect key="frame" x="61" y="467.33333333333331" width="252" height="44"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="starCount">
                                                 <integer key="value" value="5"/>
@@ -74,6 +70,7 @@
                         <outlet property="mealNameLabel" destination="Qcp-Xi-Ty1" id="thM-qe-hOh"/>
                         <outlet property="nameTextField" destination="Lhu-zm-Mzz" id="Vuu-3x-WAm"/>
                         <outlet property="photoImageView" destination="IRl-RW-0Ya" id="ltn-cy-7VM"/>
+                        <outlet property="ratingControll" destination="uNc-Dq-2dt" id="C0q-UN-qkJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

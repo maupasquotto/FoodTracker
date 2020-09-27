@@ -12,7 +12,11 @@ import UIKit
     
     //MARK: Properties
     private var ratingButtons = [UIButton]()
-    var rating = 0;
+    var rating = 0 {
+        didSet {
+            updateButtonSelectionState()
+        }
+    }
     @IBInspectable var starSize: CGSize = CGSize(width: 44.0, height: 44.0) {
         didSet {
             setupButtons()
@@ -52,7 +56,7 @@ import UIKit
         let emptyStar = UIImage(named: "emptyStar", in: bundle, compatibleWith: self.traitCollection)
         let highlightedStar = UIImage(named: "highlightedStar", in: bundle, compatibleWith: self.traitCollection)
         
-        for _ in 0..<starCount {
+        for index in 0..<starCount {
             // Create the button
             let button = UIButton()
             
@@ -67,8 +71,10 @@ import UIKit
             button.heightAnchor.constraint(equalToConstant: starSize.height).isActive = true
             button.widthAnchor.constraint(equalToConstant: starSize.width).isActive = true
             
-            // Setup the button action
+            // Set the accessibility label
+            button.accessibilityLabel = "Set \(index + 1) star rating"
             
+            // Setup the button action
             button.addTarget(self, action: #selector(RatingControl.ratingButtonTapped(button:)), for: .touchUpInside)
             
             // Add the button to the stackView
@@ -77,11 +83,54 @@ import UIKit
             // Add the new button to the raiting button array
             ratingButtons.append(button);
         }
+        
+        updateButtonSelectionState()
     }
     
     //MARK: Button Action
     @objc func ratingButtonTapped(button: UIButton) {
-        print("Button pressed 👍")
+        guard let index = ratingButtons.firstIndex(of: button) else {
+            fatalError("The button, \(button), is not in the ratingButtons array: \(ratingButtons)")
+        }
+    
+        // Calculate the rating of the selected button
+        let selectedRating = index + 1
+        
+        if selectedRating == rating {
+            // If the selected star representes the current rating, reset the rating to 0.
+            rating = 0
+        } else {
+            rating = selectedRating
+        }
+    }
+    
+    private func updateButtonSelectionState() {
+        for (index, button) in ratingButtons.enumerated() {
+            //  If the index of a button is less than the rating, that button should be selected.
+            button.isSelected = index < rating
+            
+            // Set the hint string for the currently selected star
+            let hintString: String?
+            if rating == index + 1 {
+                hintString = "Tap to reset the rating to zero."
+            } else {
+                hintString = nil
+            }
+            
+            // Calculate the value string
+            let valueString: String
+            switch (rating) {
+            case 0:
+                valueString = "No rating set."
+            case 1:
+                valueString = "1 star set."
+            default:
+                valueString = "\(rating) starts set."
+            }
+            
+            button.accessibilityHint = hintString
+            button.accessibilityValue = valueString
+        }
     }
     
 }
