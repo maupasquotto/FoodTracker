@@ -16,6 +16,7 @@
 		35659FE025167CC10017CD73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35659FDE25167CC10017CD73 /* LaunchScreen.storyboard */; };
 		35659FEB25167CC10017CD73 /* FoodTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35659FEA25167CC10017CD73 /* FoodTrackerTests.swift */; };
 		35CD8C06251D62DA007192CC /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CD8C05251D62DA007192CC /* RatingControl.swift */; };
+		35FE3B9A2523FFA6005A7441 /* MealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FE3B992523FFA6005A7441 /* MealTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		35659FEA25167CC10017CD73 /* FoodTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTrackerTests.swift; sourceTree = "<group>"; };
 		35659FEC25167CC10017CD73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35CD8C05251D62DA007192CC /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
+		35FE3B992523FFA6005A7441 /* MealTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				35CD8C05251D62DA007192CC /* RatingControl.swift */,
 				353CA5882521332700F4BA1A /* Meal.swift */,
 				35659FD925167CC00017CD73 /* Main.storyboard */,
+				35FE3B992523FFA6005A7441 /* MealTableViewCell.swift */,
 				35659FDC25167CC10017CD73 /* Assets.xcassets */,
 				35659FDE25167CC10017CD73 /* LaunchScreen.storyboard */,
 				35659FE125167CC10017CD73 /* Info.plist */,
@@ -208,6 +211,7 @@
 			files = (
 				353CA5892521332700F4BA1A /* Meal.swift in Sources */,
 				35CD8C06251D62DA007192CC /* RatingControl.swift in Sources */,
+				35FE3B9A2523FFA6005A7441 /* MealTableViewCell.swift in Sources */,
 				35659FD825167CC00017CD73 /* MainStoryController.swift in Sources */,
 				35659FD425167CC00017CD73 /* AppDelegate.swift in Sources */,
 				35659FD625167CC00017CD73 /* SceneDelegate.swift in Sources */,
