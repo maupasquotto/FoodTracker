@@ -99,7 +99,7 @@ class MealTableViewController: UITableViewController {
     private func loadSampleMeals() {
         let photo1 = UIImage(named: "meal1")
         let photo2 = UIImage(named: "meal2")
-        let photo3 = UIImage(named: "meal2")
+        let photo3 = UIImage(named: "meal3")
         
         guard let meal1 = Meal(name: "Caprese Salad", photo: photo1, rating: 4) else {
             fatalError("Unable to instantiate meal1")
