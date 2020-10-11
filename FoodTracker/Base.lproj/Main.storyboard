@@ -14,19 +14,21 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MealViewController" customModule="FoodTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="Gvb-fd-6Xx">
-                                <rect key="frame" x="20" y="64" width="374" height="478"/>
+                                <rect key="frame" x="20" y="76" width="374" height="478"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter meal name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lhu-zm-Mzz">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="mealName"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                     <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="IRl-RW-0Ya">
                                         <rect key="frame" x="0.0" y="47" width="374" height="374"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="mealPhoto"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="IRl-RW-0Ya" secondAttribute="height" multiplier="1:1" id="F8m-0s-wXm"/>
@@ -41,6 +43,7 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="starCount">
                                                 <integer key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="mealRating"/>
                                         </userDefinedRuntimeAttributes>
                                     </stackView>
                                 </subviews>
@@ -68,6 +71,9 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="5wv-8o-AB9">
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="mealSave"/>
+                            </userDefinedRuntimeAttributes>
                             <connections>
                                 <segue destination="yw5-oi-GPw" kind="unwind" unwindAction="unwindToMealListWithSender:" id="dDw-te-63q"/>
                             </connections>
@@ -187,7 +193,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Dz3-8L-f4f"/>
+        <segue reference="Hfq-rP-2mw"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="defaultPhoto" width="540" height="540"/>

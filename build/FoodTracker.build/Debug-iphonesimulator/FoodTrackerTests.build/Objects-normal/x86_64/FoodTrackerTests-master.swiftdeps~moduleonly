@@ -1,0 +1,5 @@
+version: "Apple Swift version 5.3 (swiftlang-1200.0.29.2 clang-1200.0.30.1)"
+options: "fe26a9674e0bf8b49c3b3f2ecd5e2742"
+build_time: [1602444189, 748871000]
+inputs:
+  "/Users/mauricio.pasquotto/Desktop/Mine/FoodTracker/FoodTrackerTests/FoodTrackerTests.swift": [1601241827, 159522575]
